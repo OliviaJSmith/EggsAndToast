@@ -6,8 +6,32 @@
 @{
     var externalLogins = (await schemeProvider.GetAllSchemesAsync()).Where(s => s.DisplayName != null);
 
-    ViewData["Title"] = "Sign In";
+    ViewData["Title"] = "Welcome to Eggs & Toast";
 }
+<form method="post" class="d-grid gap-1 justify-content-center">
+    <input type="hidden" name="@nameof(Model.ReturnUrl)" value="@Model.ReturnUrl" />
+    <div>
+        <label asp-for="Username" class="form-label" autocomplete="username">username</label>
+        <input asp-for="Username" class="form-control" autofocus required/>
+    </div>
+    <div>
+        <label asp-for="Password" class="form-label">password</label>
+        <input asp-for="Password" class="form-control" />
+    </div>
+
+    <div asp-validation-summary="All" class="text-danger" style="margin-bottom: -0.5rem"></div>
+    <button type="submit" class="btn-primary justify-content-center">
+        Sign in
+    </button>
+</form>
+<div class="d-grid gap-1 justify-content-center"> 
+    <div>
+        <a asp-page="Register" asp-route-ReturnUrl="@Model.ReturnUrl">Create an account</a>
+    </div>
+    <div>       
+        <a asp-page="ForgotPassword">*Forgot Password*</a>
+    </div>
+</div>
 
 @if (externalLogins.Any())
 {
