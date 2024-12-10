@@ -1,0 +1,16 @@
+{
+  "webProject": {
+    "projectFile": "./EggsAndToast.Web/EggsAndToast.Web.csproj"
+  },
+  "dataProject": {
+    "projectFile": "./EggsAndToast.Data/EggsAndToast.Data.csproj"
+  },
+
+  "rootGenerator": "Vue",
+
+  "generatorConfig": {
+    "Scripts": {
+      "targetDirectory": "../src"
+    }
+  }
+}
