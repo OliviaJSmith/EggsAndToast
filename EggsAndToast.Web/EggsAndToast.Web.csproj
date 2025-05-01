@@ -2,6 +2,7 @@
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <DotnetCliToolTargetFramework>net9.0</DotnetCliToolTargetFramework>
+    <UserSecretsId>34da1f7e-a590-4675-80ca-3cf90e9f9742</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

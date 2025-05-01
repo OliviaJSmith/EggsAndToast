@@ -23,6 +23,10 @@ const router = createRouter({
       props: true,
       component: () => import("./views/UserProfile.vue"),
     },
+    {
+      path: "/myLibrary/",
+      component: () => import("./views/MyLibrary.vue"),
+    },
 
     // Coalesce admin routes
     {
@@ -56,9 +60,9 @@ const router = createRouter({
  */
 function titledAdminPage<
   T extends
-    | typeof CAdminTablePage
-    | typeof CAdminEditorPage
-    | typeof CAdminAuditLogPage,
+  | typeof CAdminTablePage
+  | typeof CAdminEditorPage
+  | typeof CAdminAuditLogPage,
 >(component: T) {
   return defineComponent({
     setup() {
