@@ -60,9 +60,9 @@ const router = createRouter({
  */
 function titledAdminPage<
   T extends
-  | typeof CAdminTablePage
-  | typeof CAdminEditorPage
-  | typeof CAdminAuditLogPage,
+    | typeof CAdminTablePage
+    | typeof CAdminEditorPage
+    | typeof CAdminAuditLogPage,
 >(component: T) {
   return defineComponent({
     setup() {

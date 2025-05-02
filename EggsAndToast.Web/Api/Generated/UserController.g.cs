@@ -98,8 +98,8 @@ namespace EggsAndToast.Web.Api
         {
             var _params = new
             {
-                Id = id
-                //Etag = etag ?? await ((await Request.ReadFormAsync()).Files[nameof(etag)]?.OpenReadStream().ReadAllBytesAsync(true) ?? Task.FromResult<byte[]>(null))
+                Id = id,
+                Etag = etag ?? await ((await Request.ReadFormAsync()).Files[nameof(etag)]?.OpenReadStream().ReadAllBytesAsync(true) ?? Task.FromResult<byte[]>(null))
             };
 
             var dataSource = dataSourceFactory.GetDataSource<EggsAndToast.Data.Models.User, EggsAndToast.Data.Models.User>("Default");

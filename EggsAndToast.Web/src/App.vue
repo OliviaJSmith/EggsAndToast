@@ -3,7 +3,9 @@
     <v-app-bar color="primary" density="compact">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>
-        <router-link to="/" style="color: inherit"> Eggs And Toast </router-link>
+        <router-link to="/" style="color: inherit">
+          Eggs And Toast
+        </router-link>
       </v-toolbar-title>
 
       <v-menu bottom offset-y>
@@ -48,7 +50,11 @@
     <v-navigation-drawer v-model="drawer">
       <v-list>
         <v-list-item to="/" prepend-icon="fa fa-home" title="Home" />
-        <v-list-item to="/MyLibrary" prepend-icon="fa fa-home" title="My Library" />
+        <v-list-item
+          to="/MyLibrary"
+          prepend-icon="fa fa-home"
+          title="My Library"
+        />
         <v-divider></v-divider>
         <v-list-item
           v-if="$can(Permission.UserAdmin)"
